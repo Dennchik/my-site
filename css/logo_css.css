@@ -1,0 +1,109 @@
+/* ? Обнуляющий код */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a:visited {
+	color: #fff;
+	text-emphasis: none;
+	vertical-align: middle;
+	-webkit-text-emphasis: none;
+}
+
+html {
+	height: 100vh;
+	width: 100%;
+	line-height: 1.2;
+	text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	background: #000;
+	background-image: -webkit-gradient(linear, right top, left top, from(#e6e9e9), to(#d8dddd));
+	background-image: linear-gradient(270deg, #e6e9e9 0%, #d8dddd 100%);
+	-webkit-font-smoothing: antialiased;
+	font-size: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Sans-serif";
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	font-size: medium;
+	background-color: #0b1320;
+	color: #fff;
+	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrapper {
+	display: -ms-grid;
+	display: grid;
+	grid-template-areas:
+		"header header header"
+		"left-menu content right-menu"
+		"footer footer footer";
+	-ms-grid-rows: auto 1fr auto;
+	grid-template-rows: auto 1fr auto;
+	-ms-grid-columns: 15% auto 15%;
+	grid-template-columns: 15% auto 15%;
+	height: 100vh;
+	grid-gap: 0.5%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.wrapper__header {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	grid-area: header;
+}
+
+.wrapper__left-menu {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+	grid-area: left-menu;
+	border: 1px;
+	border-right-style: solid;
+	border-right-color: #2d5e93;
+}
+
+.wrapper__content {
+	border: 1px solid #727772;
+	-ms-grid-row: 2;
+	-ms-grid-column: 2;
+	grid-area: content;
+}
+
+.wrapper__right-menu {
+	border: 1px solid #727772;
+	-ms-grid-row: 2;
+	-ms-grid-column: 3;
+	grid-area: right-menu;
+}
+
+.wrapper__footer {
+	border: 1px solid #727772;
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	grid-area: footer;
+}
+
+.gridstyle {
+	background: linear-gradient(120deg, #04041a, #1e323f, #152631, #1e323f, #04041a) no-repeat;
+}
+
+.logo {
+	display: block;
+	background-size: contain;
+	background-image: url(../img/logotipe.png);
+	max-width: 100%;
+}
